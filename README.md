@@ -30,7 +30,7 @@ Your server must be able to process two different requested operations. This mea
 
 ## Deliverables
 
-Your work on this project must be submitted for grading by Wednesday Sep 27th at 11:56PM. Extensions may be obtained by following the late submission policy [https://docs.google.com/document/d/1Fx0iviSFzelwKQWx-QmeSulg4MwX9xXS].
+Your work on this project must be submitted for grading by **Wednesday Sep 27th at 11:56PM**. Extensions may be obtained by following the late submission policy [https://docs.google.com/document/d/1Fx0iviSFzelwKQWx-QmeSulg4MwX9xXS].
 
 All work must be submitted in Gradescope.
 
@@ -42,7 +42,7 @@ You must submit these work products:
 
 ## Teamwork Policy
 
-For this project, all work must be performed individually – no team submissions will be allowed. You are free to collaborate and exchange ideas, but each student must submit their own original work.
+**For this project, all work must be performed individually – no team submissions will be allowed**. You are free to collaborate and exchange ideas, but each student must submit their own original work.
 
 ## Getting Help
 
