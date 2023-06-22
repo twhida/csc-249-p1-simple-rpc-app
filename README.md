@@ -1,10 +1,8 @@
 # CSC 249 – Programming Assignment 1 – Simple RPC Client-Server App
 
-## Your First Network Application
-
 Building distributed network applications in Python is fun!
 
-For your first experience building a simple network application in Python, you will start with Python code taken from an online tutorial: Socket Programming in Python (Guide) by Nathan Jennings, available online at https://realpython.com/python-sockets/. 
+For your first experience building a simple network application in Python, you will start with Python code taken from an online tutorial: _Socket Programming in Python (Guide)_ by Nathan Jennings, available online at https://realpython.com/python-sockets/. 
 
 The Jennings tutorial opens with the design and implementation of an “Echo Client and Server.” In this simple application, the server is launched first on the local machine and makes calls to the Python sockets library to wait for a new connection. In a separate process on the same machine, the client establishes a network connection to the server and sends a single text message, “Hello, world” (you knew that was coming, right?) The server receives this message and sends it right back (“echoes”) to the client. The server exits after echoing the message, and the client exits after receiving the echo message. You are strongly encouraged to study the code, try running it, and make sure you understand how it works. I’ve placed the code in this Git repo [https://github.com/bcheikes/csc249-p1-simple-rpc-app], which you are welcome to clone.
 
@@ -13,13 +11,14 @@ The echo application makes for a fine capability demonstration but isn’t very 
 What you will do is extend the echo-server into a “remote procedure call” (RPC) server. Conceptually, a RPC server accepts incoming network requests to perform some kind of computation, typically expressed as a “requested operation” along with one or more arguments. For example, a “basic math” RPC server could process one of four requested operations: add, subtract, multiply, or divide. Such a server might accept two integer arguments and reply to the client with a message containing the result of adding, subtracting, multiplying or dividing the arguments.
 
 The main challenges for you in this exercise will be:
+
 * Coming up with a creative set of requested operations that your RPC server will process.
 * Designing a method for encoding client requests and arguments into a Python bytes object for transmission.
 * Designing a method for decoding client requests on the server, processing them, and returning a response.
 
 Like the echo application, your server should terminate after successfully processing a client message, and your client should terminate after successfully receiving a response to its request.
 
-## Design requirements
+## Design Requirements
 
 Your server must be able to process two different requested operations. This means that an indication of the requested operation needs to be passed from client to server.
 
