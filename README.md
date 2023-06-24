@@ -1,4 +1,4 @@
-# CSC 249 – Programming Assignment 1 – Simple RPC Client-Server App
+# CSC 249 – Project 1 – Simple RPC Client-Server App
 
 Building distributed network applications in Python is fun!
 
@@ -36,7 +36,7 @@ All work must be submitted in Gradescope.
 You must submit these work products:
 
 1. Source code for your client and server. Ideally, this will be a link to your public Git code repo.
-2. A document with a written description of your client-server message format (that is, a description of all implemented client and server messages, and how the various components of each message are represented). This document must also briefly summarize what your client-server application does, and provide examples of expected output for all implemented RPC operations.
+2. A document with a written description of your client-server message format (that is, a description of all implemented client and server messages, and how the various components of each message are represented). This document must also briefly summarize what your client-server application does, and provide examples of expected output for all implemented RPC operations. Your goal in writing this document should be to convey enough information in enough detail to allow a competent programmer **without access to your source code** to write either a new client that communicates properly with your server, or a new server that communicates properly with your client. This document should include at least four sections: Overview of Application, Client->Server Message Format, Server->Client Message Format, Example Output.
 3. A command-line trace showing the client and server in operation. 
 
 ## Teamwork Policy
