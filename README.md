@@ -29,7 +29,7 @@ Your server must be able to process two different requested operations. This mea
 
 ## Deliverables
 
-Your work on this project must be submitted for grading by **Wednesday Sep 27th at 11:59PM**. Extensions may be obtained by following the late submission policy [https://docs.google.com/document/d/1Fx0iviSFzelwKQWx-QmeSulg4MwX9xXS].
+Your work on this project must be submitted for grading by **Wednesday Sep 27th at 11:59PM**. Extensions may be obtained by following the late submission policy [https://drive.google.com/file/d/16DYyy_WhaoNdPRo8foJcQhUzPsh3_jG6/view?usp=drive_link].
 
 All work must be submitted in Gradescope.
 
