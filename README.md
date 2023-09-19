@@ -61,13 +61,21 @@ client is done!
 
 ### Server Trace
 % python3 simple-math-server.py
+
 basic math server starting - listening for connections at IP 127.0.0.1 and port 65432
+
 connected established with ('127.0.0.1', 53740)
+
 received client message: '+1:3:5' [6 bytes]
+
 requested operation is addition
+
 request includes 3 arguments: 1 3 5
+
 result of operation: 9
+
 sending result message '1+3+5=9' back to client
+
 server is done!
 
 ## Teamwork Policy
