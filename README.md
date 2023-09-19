@@ -48,10 +48,15 @@ Below we illustrate command line traces for a client-server application in which
 ### Client Trace
 
 % python3 simple-math-client.py add 1 3 5
+
 client starting - connecting to math server at IP 127.0.0.1 and port 65432
+
 connection established, sending request '+1:3:5'
+
 message sent, waiting for reply
+
 Received reply: '1+3+5=9' [7 bytes]
+
 client is done!
 
 ### Server Trace
