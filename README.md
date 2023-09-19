@@ -25,7 +25,7 @@ Your server must be able to process at least two different requested operations 
 
 * Each requested operation must take at least two arguments ("nouns"). This means that you need to encode each argument in the request message, with an indication of where one argument “ends” and the next one “begins”.
 * Your client must obtain the desired operation and its arguments either from keyboard input or from the command line.
-* The client and the server applications must generate time-stamped output that documents when connections are made, when messages and sent and received, and what was sent and what was received.
+* The client and the server applications must generate tracing messages that document when connections are made, when messages and sent and received, and what was sent and what was received. (Good examples of tracing messages can be found in the sample code provided.)
 * You must anticipate and gracefully handle reasonable errors which could occur at either end of the communication channel.
 * Source code of your client and server must be well documented. Comments should be sufficient to allow a third party to understand your code, run it, and confirm that it works.
 
