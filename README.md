@@ -4,7 +4,7 @@ Building distributed network applications in Python is fun!
 
 For your first experience building a simple network application in Python, you will start with Python code taken from an online tutorial: _Socket Programming in Python (Guide)_ by Nathan Jennings, available online at https://realpython.com/python-sockets/. 
 
-The Jennings tutorial opens with the design and implementation of an “Echo Client and Server.” In this simple application, the server is launched first on the local machine and makes calls to the Python sockets library to wait for a new connection. In a separate process on the same machine, the client establishes a network connection to the server and sends a single text message, “Hello, world” (you knew that was coming, right?) The server receives this message and sends it right back (“echoes”) to the client. The server exits after echoing the message, and the client exits after receiving the echo message. You are strongly encouraged to study the code, try running it, and make sure you understand how it works. I’ve placed (a slightly modified version of) the code in this Git repo [https://github.com/bcheikes/csc249-p1-simple-rpc-app], which you are welcome to clone.
+The Jennings tutorial opens with the design and implementation of an “Echo Client and Server.” In this simple application, the server is launched first on the local machine and makes calls to the Python sockets library to wait for a new connection. In a separate process on the same machine, the client establishes a network connection to the server and sends a single text message, “Hello, world” (you knew that was coming, right?) The server receives this message and sends it right back (“echoes”) to the client. The server exits after echoing the message, and the client exits after receiving the echo message. You are strongly encouraged to study the code, try running it, and make sure you understand how it works. I’ve placed (a slightly modified version of) the code in this Git repo [https://github.com/abpw/csc-249-p1-simple-rpc-app], which you are welcome to clone.
 
 The echo application makes for a fine capability demonstration but isn’t very interesting. For this exercise, I want you to build something more interesting so you can get some practical experience with encoding, transmitting, receiving, decoding, and processing more complex messages.
 
@@ -12,7 +12,7 @@ What you will do is extend the echo-server into a “remote procedure call” (R
 
 The main challenges for you in this exercise will be:
 
-* Coming up with a creative set of requested operations that your RPC server will process.
+* Coming up with a creative set of requested operations that your RPC server will process (put the FUN in REMOTELY EXECUTED FUNCTIONS!).
 * Designing a method for encoding client requests and arguments into a Python bytes object for transmission.
 * Designing a method for decoding client requests on the server, processing them, and returning a response.
 * Building in appropriate error handling.
@@ -31,9 +31,9 @@ Your server must be able to process at least two different requested operations 
 
 ## Deliverables
 
-Your work on this project must be submitted for grading by **Wednesday Sep 27th at 11:59PM**. Extensions may be obtained by following the late submission policy [https://drive.google.com/file/d/16DYyy_WhaoNdPRo8foJcQhUzPsh3_jG6/view?usp=drive_link].
+Your work on this project must be submitted for grading by **Friday, September 20th at 11:59PM**. Extensions may be obtained by sending me a message on Slack before the original due date.
 
-All work must be submitted in Gradescope. (Link is posted in Moodle.)
+All work must be submitted in Gradescope.
 
 You must submit these work products:
 
@@ -80,7 +80,7 @@ server is done!
 
 ## Teamwork Policy
 
-**For this project, all work must be performed individually – no team submissions will be allowed**. You are free to collaborate and exchange ideas, but each student must submit their own original work. To the extent you obtain ideas and feedback from other students, you should give them proper credit in the Acknowledgments section of your specification document. For example, "Jane Austen helped me think through the different messages that my ATM server might need to be able to handle", "Sophia Smith helped me understand the purpose of the htons() function". During class we will discuss the "rules of engagement" - what is ok and not ok in terms of collaboration with others. The key objective of this exercise is to give each student the opportunity to work with the Python sockets library, then design and implement a simple message protocol. **You should not use the Acknowledgments section to acknowledge help from the course instructor or teaching assistant.** The purpose of the section is to allow students to give appropriate credit for any peer assistance in conceiving and completing individual assignments.
+**For this project, all work must be submitted individually – no team submissions will be allowed**. You are free to collaborate and exchange ideas, but each student must submit their own original work. To the extent you obtain ideas and feedback from other students, you should give them proper credit in the Acknowledgments section of your specification document. For example, "Jane Austen helped me think through the different messages that my ATM server might need to be able to handle", "Sophia Smith helped me understand the purpose of the htons() function". During class we will discuss the "rules of engagement" - what is ok and not ok in terms of collaboration with others. The key objective of this exercise is to give each student the opportunity to work with the Python sockets library, then design and implement a simple message protocol. **You should not use the Acknowledgments section to acknowledge help from the course instructor or teaching assistant.** The purpose of the section is to allow students to give appropriate credit for any peer assistance in conceiving and completing individual assignments.
 
 ## Getting Help
 
@@ -90,7 +90,7 @@ There is plenty of self-help material out there to help you understand socket pr
 * Python sockets library documentation [https://docs.python.org/3/library/socket.html]
 * LinkedIn Learning (Smith College offers free access) – search “python sockets”
 * Python sockets tutorials on YouTube [for example, try https://www.youtube.com/watch?v=3QiPPX-KeSc]. There are many!
-* Slack messages in the #questions channel. Students are encouraged to help each other out – this is part of what “participation and engagement” means in the overall course grading rubric.
+* Slack messages in the #networks_questions channel. Students are encouraged to help each other out – this is part of what “participation and engagement” means in the overall course grading rubric.
 * Instructor and TA office hours!
 
 ## Grading Rubric
