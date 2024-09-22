@@ -11,18 +11,24 @@ def understand(client_order):
     order_type = order[0].strip()
 
     if order_type == "scoop":
+        if len(order) < 4:
+            return "Your scoop order is missing your preferences! Please try again."
         size = order[1].strip()
         flavor = order[2].strip()
         syrup = order[3].strip()
         return f"Here is your {size} {flavor} {order_type} with {syrup}!"
         
     elif order_type == "milkshake":
+        if len(order) < 4:
+            return "Your milkshake order is missing your preferences! Please try again."
         flavor = order[1].strip()
         milk = order[2].strip()
         syrup = order[3].strip()
         return f"Here is your {flavor} {order_type} with {milk} and {syrup}!"
 
     elif order_type == "chipwich":
+        if len(order) < 3:
+            return "Your chipwich order is missing your preferences! Please try again."
         flavor = order[1].strip()
         cookie = order[2].strip()
         return f"Here is your {flavor} chipwich with {cookie} cookies!"
@@ -41,7 +47,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             data = conn.recv(1024)
             if not data:
                 break
-            #recieve order and decode
+            #receive order and decode
             client_order = data.decode('utf-8')
             print(f"Received client order: '{client_order}' Current bytes: [{len(data)} bytes]\n")
 
