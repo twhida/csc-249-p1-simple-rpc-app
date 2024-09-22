@@ -28,50 +28,50 @@ while order_type not in ["scoop", "milkshake", "chipwich"]:
     #error handling implemented with if statements!
     if order_type == "scoop":
         while size not in ["small", "medium", "large"]:
-            size = input("Specify the cup size: small, medium, large: ")
+            size = input("Specify the cup size: small, medium, large: \n")
             if size not in ["small", "medium", "large"]:
-                print("I didn't quite catch that! Please choose either small, medium, or large:" )
+                print("I didn't quite catch that! Please choose either small, medium, or large: \n" )
         
         while flavor not in ["strawberry", "chocolate", "vanilla"]:
-            flavor = input("Specify a flavor: strawberry, chocolate, vanilla: ")
+            flavor = input("Specify a flavor: strawberry, chocolate, vanilla: \n")
             if flavor not in ["strawberry", "chocolate", "vanilla"]:
-                print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: ")
+                print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: \n")
 
         while syrup not in ["no syrup", "chocolate syrup", "cherry syrup"]:
-            syrup = input("Choose a syrup: no syrup, chocolate syrup, or cherry syrup: ")
+            syrup = input("Choose a syrup: no syrup, chocolate syrup, or cherry syrup: \n")
             if syrup not in ["no syrup", "chocolate syrup", "cherry syrup"]:
-                print("I didn't quite catch that! Please choose either no syrup, chocolate syrup, or cherry syrup: ")
+                print("I didn't quite catch that! Please choose either no syrup, chocolate syrup, or cherry syrup: \n")
 
     #arguments for milkshake order type are updated and include flavor, milk type, and choice of syrup
     #error handling implemented with if statements!
     elif order_type == "milkshake":
         while flavor not in ["strawberry", "chocolate", "vanilla"]:
-            flavor = input("Specify a flavor: strawberry, chocolate, vanilla: ")
+            flavor = input("Specify a flavor: strawberry, chocolate, vanilla: \n")
             if flavor not in ["strawberry", "chocolate", "vanilla"]:
-                print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: ")
+                print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: \n")
         
         while milk not in ["dairy milk", "oat milk", "almond milk", "soy milk"]:
-            milk = input("Choose your milk or alternative: dairy milk, oat milk, almond milk, or soy milk: ")
+            milk = input("Choose your milk or alternative: dairy milk, oat milk, almond milk, or soy milk: \n")
             if milk not in ["dairy milk", "oat milk", "almond milk", "soy milk"]:
-                print("I didn't quite catch that! Please choose either dairy milk, oat milk, almond milk, or soy milk: ")
+                print("I didn't quite catch that! Please choose either dairy milk, oat milk, almond milk, or soy milk: \n")
         
         while syrup not in ["no syrup", "chocolate syrup", "cherry syrup"]:
-            syrup = input("Choose a syrup: no syrup, chocolate syrup, or cherry syrup: ")
+            syrup = input("Choose a syrup: no syrup, chocolate syrup, or cherry syrup: \n")
             if syrup not in ["no syrup", "chocolate syrup", "cherry syrup"]:
-                print("I didn't quite catch that! Please choose either no syrup, chocolate syrup, or cherry syrup:")
+                print("I didn't quite catch that! Please choose either no syrup, chocolate syrup, or cherry syrup: \n")
 
     #arguments for chipwich order type are updated and include flavor and choice of cookie
     #error handling implemented with if statements!
     elif order_type == "chipwich":
         while flavor not in ["strawberry", "chocolate", "vanilla"]:
-            flavor = input("Specify a flavor: strawberry, chocolate, vanilla: ")
+            flavor = input("Specify a flavor: strawberry, chocolate, vanilla: \n")
             if flavor not in ["strawberry", "chocolate", "vanilla"]:
-                print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: ")
+                print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: \n")
         
         while cookie not in ["chocolate chip", "oatmeal raisin", "sugar cookie", "snickerdoodle"]:
-            cookie = input("Choose the cookies for your ice cream sandwich: chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: ")
+            cookie = input("Choose the cookies for your ice cream sandwich: chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: \n")
             if cookie not in ["chocolate chip", "oatmeal raisin", "sugar", "snickerdoodle"]:
-                print("I didn't quite catch that! Please choose either chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: ")
+                print("I didn't quite catch that! Please choose either chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: \n")
 
 #MSG message created based on order type
 if order_type == "scoop":
