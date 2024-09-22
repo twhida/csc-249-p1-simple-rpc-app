@@ -11,16 +11,16 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.listen()
     conn, addr = s.accept()
     with conn:
-        print(f"Connected established with {addr}")
+        print("Successfully opened shop: We are open to orders!\n")
         while True:
             #data should be parsed/evaluated
             data = conn.recv(1024)
             if not data:
                 break
             #this should be the decoded order
-            print(f"Received client order: '{data!r}' Payment due: [{len(data)} bytes]")
+            print(f"Received client order: '{data!r}' Payment due: [{len(data)} bytes]\n")
             #here it should also give back the decoded order
-            print(f"serving '{data!r}' to the to customer!")
+            print(f"Serving '{data!r}' to the to customer!\n")
             conn.sendall(data)
 
-print("Really Pretty Cool ice cream has been served, order complete!")
+print("Really Pretty Cool ice cream has been served, order complete! Closing shop...\n")
