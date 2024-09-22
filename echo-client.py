@@ -7,8 +7,29 @@ PORT = 65432  # The port used by the server
 
 print("Welcome to Tomoko's Really Pretty Cool (RPC) Ice Cream Stand!\n")
 
-order_type = input("Would you like your ice cream as a scoop, milkshake, or chipwich?\nSpecify a flavor: strawberry, chocolate, vanilla, and indicate whether you would like no_syrup, chocolate_syrup, or cherry_syrup.\nSeparate your order by commas!\n")
-MSG = f"{order_type}"
+
+order_type = ""
+size = ""
+flavor = ""
+syrup = ""
+milk = ""
+cookie = ""
+
+
+
+while order_type not in ["scoop", "milkshake", "chipwich"]:
+    order_type = input("Would you like your ice cream as a scoop, milkshake, or chipwich?\n")
+
+
+if order_type == "scoop":
+    size = input("Specify the cup size: small, medium, large")
+    while size == "small" or size == "medium" or size == "large":
+        flavor = input("Specify a flavor: strawberry, chocolate, vanilla")
+    print("Scoop size was not recorded, please try again.")
+    size = input("Please specify a size: small, medium, or large:\n")
+        
+    
+MSG = f"{order_type},{size},{flavor}"
 
 print("Customer identified! - Connecting you to server", HOST, "and port...", PORT)
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
