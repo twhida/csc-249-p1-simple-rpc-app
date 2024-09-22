@@ -20,7 +20,8 @@ cookie = ""
 while order_type not in ["scoop", "milkshake", "chipwich"]:
     order_type = input("Would you like your ice cream as a scoop, milkshake, or chipwich?\n")
 
-
+while size not in ["small", "medium", "large"]:
+    
 if order_type == "scoop":
     size = input("Specify the cup size: small, medium, large")
     while size == "small" or size == "medium" or size == "large":
