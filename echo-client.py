@@ -70,7 +70,7 @@ while order_type not in ["scoop", "milkshake", "chipwich"]:
         
         while cookie not in ["chocolate chip", "oatmeal raisin", "sugar cookie", "snickerdoodle"]:
             cookie = input("Choose the cookies for your ice cream sandwich: chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: ")
-            if cookie not in ["chocolate chip", "oatmeal raisin", "sugar cookie", "snickerdoodle"]:
+            if cookie not in ["chocolate chip", "oatmeal raisin", "sugar", "snickerdoodle"]:
                 print("I didn't quite catch that! Please choose either chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: ")
 
 #MSG message created based on order type
