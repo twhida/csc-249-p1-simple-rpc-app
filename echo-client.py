@@ -4,8 +4,14 @@ import socket
 
 HOST = "127.0.0.1"  # The server's hostname or IP address
 PORT = 65432  # The port used by the server
-MSG = ("Welcome to Tomoko's Really Pretty Cool (RPC) Ice Cream Stand!\n\nFlavors: strawberry, chocolate, vanilla\nWe offer: scoop, milkshake, chipwich\nToppings: no_topping, whipped_cream, sprinkles\n\nPlease indicate your order by writing the flavor, ice cream type, and toppings (or lack thereof) in order.\n")
 
+order_type = input("Would you like your ice cream as a scoop, milkshake, or chipwich?\n")
+flavor = ("Specify a flavor: strawberry, chocolate, vanilla\n")
+syrup = ("Would you like no_syrup, chocolate_syrup, or cherry_syrup?\n")
+
+MSG = f"{order_type}:{flavor}:{syrup}"
+
+print("Welcome to Tomoko's Really Pretty Cool (RPC) Ice Cream Stand!\n")
 print("Customer identified! - Connecting you to server", HOST, "and port...", PORT)
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
