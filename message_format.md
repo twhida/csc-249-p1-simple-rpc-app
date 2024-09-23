@@ -1,0 +1,17 @@
+A document with a written description of your client-server message format (that is, a description of all implemented client and server messages, and how the various components of each message are represented). This document must also briefly summarize what your client-server application does, and provide examples of expected output for all implemented RPC operations. Your goal in writing this document should be to convey enough information in enough detail to allow a competent programmer without access to your source code to write either a new client that communicates properly with your server, or a new server that communicates properly with your client. 
+
+This document should include at least five sections: Overview of Application, Client->Server Message Format, Server->Client Message Format, Example Output, Acknowledgments.
+
+# Overview of Application 
+In this project, my client-server application is represented as an ice cream shop, with the server as the shop, taking orders (messages), and the customer as the client, sending and receiving order receipts (messages) back. 
+
+# Client->Server Message Format
+
+
+# Server-> Client Message Format
+
+
+# Example Output
+
+
+# Acknowledgements
