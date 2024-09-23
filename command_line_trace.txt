@@ -1,0 +1,40 @@
+>>>> Example order: chocolate milkshake with almond milk ad chocolate syrup <<<<
+
+<echo-server.py terminal>
+Server starting - opening up shop at 127.0.0.1 with our cool entryway door with model number 65432
+
+<echo-client.py terminal>
+Welcome to Tomoko's Really Pretty Cool (RPC) Ice Cream Stand!
+
+Customer identified! - Connecting you to server 127.0.0.1 and port... 65432
+
+<echo-server.py terminal>
+Successfully opened shop: We are open to orders!
+
+<echo-client.py terminal>
+Would you like a scoop, milkshake, or chipwich?
+milkshake
+Specify a flavor: strawberry, chocolate, vanilla: 
+chocolate
+Choose your milk or alternative: dairy milk, oat milk, almond milk, or soy milk: 
+almond milk
+Choose a syrup: no syrup, chocolate syrup, or cherry syrup: 
+chocolate syrup
+
+<echo-client.py terminal>
+connection established! 'You ordered: milkshake,chocolate,almond milk,chocolate syrup'
+Ice cream order sent, thank you for your patience!
+
+<echo-server.py terminal>
+Received client order: 'milkshake,chocolate,almond milk,chocolate syrup' Current bytes: [47 bytes]
+
+Saying 'Here is your chocolate milkshake with almond milk and chocolate syrup!' to the to customer!
+
+<echo-client.py terminal>
+Order up! Your order is ready: 'b'Here is your chocolate milkshake with almond milk and chocolate syrup!'' Current bytes: [70 bytes] Thank you for your visit!
+
+<echo-server.py terminal>
+Saying 'Here is your chocolate milkshake with almond milk and chocolate syrup!' to the to customer!
+
+<echo-client.py terminal>
+Your order was fulfilled. Time for a Lactaid?
