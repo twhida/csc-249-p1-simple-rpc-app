@@ -13,7 +13,7 @@ The server code imports the python socket library, and binds our socket to addre
 We now enter a while statement, and if there is data, we indicate that messages, given that there is data from a connection, can be up to 1024 bytes. IF there is no data, we break from the while statement. Proceeding with the case that there is data, we set the client's message to be the data, decoded using 'utf-8'. This is followed by a print message indicating the receival of data/message from the client, and an indication of the length of the data/message in bytes. Upon receiving the data, the server decodes the recieved message based on a function that turns the ice cream order (client's comma formatted data/messsage) into a sentence, and echoes the entire message back to the client before closing gracefully.
 
 ## Client code
-
+The client code mirrors the server code, but sends MSG upon connecting to the server. A print statement indicating that the message was sent follows, and then the client waits to receive the echoed data from the server and captures it as ECHO_MSG. The ECHO_MSG that is received is the order formatted in sentence form as accomplished by the server code. This ECHO_MSG is printed upon receival, and the client closes gracefully at after printing.
 
 # Client->Server Message Format
 The client to server message format is supportedby while statements that prompt input from the terminal. All arguments, including the operation (order_type)indication are set to empty strings at the beginning of the program. As the order type as empty strings do not match the three possible order types "scoop", "milkshake", or "chipwich", the input is prompted. If the input by the user that overwrites the pre-set empty string does not match one of the three options again, a second message indicating that the input must be one of the three options is printed. This will happen for as long as the input does not match the order type options. 
@@ -24,13 +24,40 @@ If the order type matches "scoop", "milkshake", or "chipwich", the program enter
 The server to client echo-back message format is structured in if statements according to order type. The order type is the string in the first index of the MSG array, and the subsequent arguments are in indeces with respect to the order type. If the order type is scoop, the subsequent indeces' strings are divided into arguments size, flavor, and syrup, and a string that incorporates these arguments into a cohesive sentence format is returned. The same process is true for order type milkshake and chipwich, but the arguments vary from the scoop arguments. If for any reason, the error handling in the client code was unsuccessful, there is an else return statement at the conclusion of the if statements that warns an unspecified order type.
 
 # Example Output
+
+## Ex 1: Milkshake
 Indicated in the command_line_trace.txt file
+Order example: milkshake, chocolate, almond milk, chocolate syrup
 
 <echo-client.py terminal>
 Order up! Your order is ready: 'b'Here is your chocolate milkshake with almond milk and chocolate syrup!'' Current bytes: [70 bytes] Thank you for your visit!
 
 <echo-server.py terminal>
 Saying 'Here is your chocolate milkshake with almond milk and chocolate syrup!' to the to customer!
+
+<echo-client.py terminal>
+Your order was fulfilled. Time for a Lactaid?
+
+## Ex 2: Scoop
+Order example: scoop, medium, strawberry, chocolate syrup
+
+<echo-client.py terminal>
+Order up! Your order is ready: 'b'Here is your medium strawberry scoop with chocolate syrup!'' Current bytes: [58 bytes] Thank you for your visit!
+
+<echo-server.py terminal>
+Saying 'Here is your medium strawberry scoop with chocolate syrup!' to the to customer!
+
+<echo-client.py terminal>
+Your order was fulfilled. Time for a Lactaid?
+
+## Ex 3: Chipwich
+Order example: scoop, medium, strawberry, chocolate syrup
+
+<echo-client.py terminal>
+OOrder up! Your order is ready: 'b'Here is your strawberry chipwich with sugar cookies!'' Current bytes: [59 bytes] Thank you for your visit!
+
+<echo-server.py terminal>
+Saying 'Here is your strawberry chipwich with sugar cookies!' to the to customer!
 
 <echo-client.py terminal>
 Your order was fulfilled. Time for a Lactaid?

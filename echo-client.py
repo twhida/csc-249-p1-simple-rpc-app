@@ -68,7 +68,7 @@ while order_type not in ["scoop", "milkshake", "chipwich"]:
             if flavor not in ["strawberry", "chocolate", "vanilla"]:
                 print("I didn't quite catch that! Please choose either strawberry, chocolate, vanilla: \n")
         
-        while cookie not in ["chocolate chip", "oatmeal raisin", "sugar cookie", "snickerdoodle"]:
+        while cookie not in ["chocolate chip", "oatmeal raisin", "sugar", "snickerdoodle"]:
             cookie = input("Choose the cookies for your ice cream sandwich: chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: \n")
             if cookie not in ["chocolate chip", "oatmeal raisin", "sugar", "snickerdoodle"]:
                 print("I didn't quite catch that! Please choose either chocolate chip, oatmeal raisin, sugar cookie, or snickerdoodle: \n")
@@ -89,7 +89,7 @@ try:
         print(f"connection established! 'You ordered: {MSG}'")
         s.sendall(bytes(MSG, 'utf-8'))
         print("Ice cream order sent, thank you for your patience!\n")
-        data = s.recv(1024)
+        ECHO_MSG = s.recv(1024)
 except ConnectionRefusedError:
     print("It looks there's no one to take your order... See if the shop is actually open.")
     exit(1)
@@ -99,5 +99,5 @@ except Exception as e:
 
 #message recieved from the server
 #closing upon recieving the message from server
-print(f"Order up! Your order is ready: '{data!r}' Current bytes: [{len(data)} bytes] Thank you for your visit!\n")
+print(f"Order up! Your order is ready: '{ECHO_MSG!r}' Current bytes: [{len(ECHO_MSG)} bytes] Thank you for your visit!\n")
 print("Your order was fulfilled. Time for a Lactaid?\n")
